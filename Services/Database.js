@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Conexao = async () => {
   await mongoose
     .set("strictQuery", false)
-    .connect(process.env.MONGO_URI, { dbName: "netflix" })
+    .connect(`${process.env.MONGO_URI}`, { dbName: "netflix" })
     .then(() => console.log("mongodb conectado com sucesso"))
     .catch((e) => console.log(e));
 };
