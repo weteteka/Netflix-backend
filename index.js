@@ -8,6 +8,6 @@ const app = express();
 app.use(express.json());
 const port = process.env.PORT;
 Conexao();
-app.use("/auth", authRouter);
+app.use("/auth", authRouter)
 app.use("/user", userRouter);
 app.listen(port, () => console.log(`rodando na porta ${port}`));
