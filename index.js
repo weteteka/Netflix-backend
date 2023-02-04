@@ -6,7 +6,7 @@ const userRouter = require("./Routes/user.routes");
 const Conexao = require("./Services/Database");
 const app = express();
 app.use(express.json());
-const port = process.env.PORT;
+const port = process.env.PORT | 4000;
 Conexao();
 app.use("/auth", authRouter)
 app.use("/user", userRouter);
